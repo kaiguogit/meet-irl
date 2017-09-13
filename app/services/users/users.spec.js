@@ -1,42 +1,60 @@
 // used to test services
-describe('Users factory', function() {
-  var Users;
+describe('Users factory', ()  => {
+  let Users
 
-  // Before each test load our api.users module
+  let userList = [
+    {
+      id: '1',
+      name: 'Jane',
+      role: 'Designer',
+      location: 'New York',
+      twitter: 'gijane'
+    },
+    {
+      id: '2',
+      name: 'Bob',
+      role: 'Developer',
+      location: 'New York',
+      twitter: 'billybob'
+    },
+    {
+      id: '3',
+      name: 'Jim',
+      role: 'Developer',
+      location: 'Chicago',
+      twitter: 'jimbo'
+    },
+    {
+      id: '4',
+      name: 'Bill',
+      role: 'Designer',
+      location: 'LA',
+      twitter: 'dabill'
+    }
+  ]
+
+  // Load our api.users module
   beforeEach(angular.mock.module('api.users'));
 
-  // Before each test set our injected Users factory (_Users_) to our local Users variable
-  beforeEach(inject(function(_Users_) {
-    Users = _Users_;
-  }));
+  // Set our injected Users factory (_Users_) to our local Users variable
+  beforeEach(inject((_Users_) => {
+    Users = _Users_
+  }))
 
-  // A simple test to verify the Users factory exists
-  it('should exist', function() {
-    expect(Users).toBeDefined();
-  });
-});
+  // A simple test to verify the Users service exists
+  it('should exist', () => {
+    expect(Users).toBeDefined()
+  })
 
-// describe('Users factory', ()  => {
-//   let Users
-//
-//   // Load our api.users module
-//   beforeEach(angular.mock.module('api.users'));
-//
-//   // Set our injected Users factory (_Users_) to our local Users variable
-//   beforeEach(inject((_Users_) => {
-//     Users = _Users_
-//   }))
-//
-//   // A simple test to verify the Users service exists
-//   it('should exist', () => {
-//     expect(Users).toBeDefined()
-//   })
-//
-//   // A set of tests for our Users.all() method
-//   describe('.all()', () => {
-//     // A simple test to verify the method all exists
-//     it('should exist', () => {
-//       expect(Users.all).toBeDefined()
-//     })
-//   })
-// })
+  // A set of tests for our Users.all() method
+  describe('.all()', () => {
+    // A simple test to verify the method all exists
+    it('should exist', () => {
+      expect(Users.all).toBeDefined()
+    })
+    // test to verify that calling all() returns array of users in users.js
+    it('should return a hard-coded list of users', () =>{
+      expect(Users.all()).toEqual(userList)
+    })
+  })
+})

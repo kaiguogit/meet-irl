@@ -4,3 +4,6 @@ node_modules/
 vendor/*
 yarn-error.log
 yarn.lock
+.dist
+gulpfile.js
+.babelrc

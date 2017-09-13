@@ -1,29 +1,44 @@
 // used for services
-describe('Users factory', function() {
-  var Users;
+angular.module('api.users', [])
+.factory('Users', () => {
+  let Users = {};
 
-  // Before each test load our api.users module
-  beforeEach(angular.mock.module('api.users'));
+  // The array of users our factory will provide us
+  let userList = [
+    {
+      id: '1',
+      name: 'Jane',
+      role: 'Designer',
+      location: 'New York',
+      twitter: 'gijane'
+    },
+    {
+      id: '2',
+      name: 'Bob',
+      role: 'Developer',
+      location: 'New York',
+      twitter: 'billybob'
+    },
+    {
+      id: '3',
+      name: 'Jim',
+      role: 'Developer',
+      location: 'Chicago',
+      twitter: 'jimbo'
+    },
+    {
+      id: '4',
+      name: 'Bill',
+      role: 'Designer',
+      location: 'LA',
+      twitter: 'dabill'
+    }
+  ]
 
-  // Before each test set our injected Users factory (_Users_) to our local Users variable
-  beforeEach(inject(function(_Users_) {
-    Users = _Users_;
-  }));
+  Users.all = function() {
+    // Returning the array of users. Eventually this will be an API call.
+    return userList
+  }
 
-  // A simple test to verify the Users factory exists
-  it('should exist', function() {
-    expect(Users).toBeDefined();
-  });
-});
-
-// angular.module('api.users', [])
-// .factory('Users', () => {
-//   let Users = {}
-//
-//   Users.all = () => {
-//     console.log('Users.all')
-//   }
-//   return (
-//     Users
-//   )
-// })
+  return Users
+}) //end Users factory
