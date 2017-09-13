@@ -35,7 +35,7 @@ angular.module('api.users', [])
     }
   ]
 
-  Users.all = function() {
+  Users.all = () => {
     // Returning the array of users. Eventually this will be an API call.
     return userList
   }
