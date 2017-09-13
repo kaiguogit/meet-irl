@@ -6,6 +6,8 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['jasmine'],
     files: [
+      './app/vendors/angular.min.js',
+      './app/vendors/angular-ui-router.min.js',
       './app/services/users/users.spec.js'
     ],
     exclude: [

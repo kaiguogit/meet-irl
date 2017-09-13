@@ -1,6 +1,21 @@
-// used to test service
+// used to test services
+
 describe('Users factory', () => {
-  it('has a dummpy spec to test 2 + 2', () => {
-    expect(2 + 2).toEqual(4)
+  let users
+
+  beforeEach(angular.mock.module('api.users'))
+
+  beforeEach(inject((_Users_) => {
+    Users = _Users_
+  }))
+
+  it('should exist', () => {
+    expext(Users).toBeDefinted()
+  })
+
+  describe('.all()', () => {
+    it('should exist', () => {
+      expect(Users.all).toBeDefinted()
+    })
   })
 })
