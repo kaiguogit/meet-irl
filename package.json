@@ -1,0 +1,30 @@
+{
+  "name": "meet-irl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mlars84/meet-irl.git",
+  "author": "Matt Larson <matt.a.larson@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "gulp": "babel-node node_modules/.bin/gulp",
+    "lint": "eslint app.js",
+    "start": "babel-node server.js",
+    "auto-start": "nodemon --exec \"npm run lint && npm start\" --ignore public/js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "gulp-cli": "^1.4.0",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.6.1",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-pug": "^3.3.0"
+  }
+}
