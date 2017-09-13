@@ -1,1 +1,6 @@
-console.log('app.js')
+angular.module('myApp', [
+  'ui.router'
+])
+.config(($urlRouterProvider) => {
+  $urlRouterProvider.otherwise("/")
+})

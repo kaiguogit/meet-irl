@@ -12,7 +12,10 @@
     "auto-start": "nodemon --exec \"npm run lint && npm start\" --ignore public/js"
   },
   "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.3",
     "body-parser": "^1.18.1",
+    "bootstrap": "^3.3.7",
     "express": "^4.15.4",
     "gulp-cli": "^1.4.0",
     "morgan": "^1.8.2"

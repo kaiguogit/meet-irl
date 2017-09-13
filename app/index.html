@@ -2,11 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="app.js" charset="utf-8"></script>
+    <!-- bootstrap and app.css -->
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
+    <!-- angular and ui-router -->
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-ui-router.min.js" charset="utf-8"></script>
+
+    <!-- angular app -->
+    <script src="app.js" charset="utf-8"></script>
+
+    <base href="/">
     <title>Fictional Employee Directory</title>
   </head>
-  <body>
-    <h1>Meet-irl Fictional Employee Directory</h1>
+  <body ng-app="myApp">
+    <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand">MeetIrl</a>
+      </div>
+    </div>
+  </nav>
+
+  <div ui-view>Hello, world!</div>
   </body>
 </html>

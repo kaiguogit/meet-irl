@@ -1,5 +1,18 @@
+.jumbotron {
+  text-align: center;
+  margin: 1em 1em auto;
+  padding: 0 1em 0 1em;
+  background-color: darkgrey;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont,
+  Seqoe UI, Roboto, Oxygen-Sans,
+  Cantarell, Helvetica Neue, sans-serif;
+}
 body {
   display: flex;
   justify-content: center;
-  background-color: skyblue;
+  background-color: lightgrey;
+  font-family: -apple-system, BlinkMacSystemFont,
+  Seqoe UI, Roboto, Oxygen-Sans,
+  Cantarell, Helvetica Neue, sans-serif;
 }
