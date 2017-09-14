@@ -38,6 +38,13 @@ angular.module('api.users', [])
   Users.all = () => {
     // Returning the array of users. Eventually this will be an API call.
     return userList
+  }//end Users.all method
+
+  Users.findById = (id) => {
+    // Returning a single user object as our test expects it to
+    return userList.find((user) => {
+      return user.id === id
+    })
   }
 
   return Users
