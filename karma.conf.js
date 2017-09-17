@@ -12,7 +12,8 @@ module.exports = function(config) {
       './app/services/users/users.js',                                 // Users factory
       './app/app.js',                                                  // angular app
       './app/services/users/users.spec.js',
-      './app/components/users/users.spec.js'
+      './app/components/users/users.spec.js',
+      './app/components/users/users.js'
     ],
     exclude: [
     ],
