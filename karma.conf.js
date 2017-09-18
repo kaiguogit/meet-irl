@@ -13,7 +13,9 @@ module.exports = function(config) {
       './app/app.js',                                                  // angular app
       './app/services/users/users.spec.js',
       './app/components/users/users.spec.js',
-      './app/components/users/users.js'
+      './app/components/users/users.js',
+      './app/services/pokemon/pokemon.spec.js',
+      './app/services/pokemon/pokemon.js'
     ],
     exclude: [
     ],
